@@ -1,5 +1,6 @@
 pipeline {
-  agent any
+    agent any
+
     stages {
         stage ('Build') {
             steps {
@@ -11,11 +12,21 @@ pipeline {
                 '''
             }
         }
+        
         stage ('Test') {
             steps {
                 sh '''#!/bin/bash
                 chmod +x system_resources_test.sh
                 ./system_resources_test.sh
+                '''
+            }
+        }
+        
+        stage ('Deploy') {
+            steps {
+                sh '''#!/bin/bash
+                source venv/bin/activate
+                eb create Bank_Application_main --single
                 '''
             }
         }
