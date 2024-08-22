@@ -4,18 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''#!/bin/bash
+                sh '''
                 python3.7 -m venv venv
-                source venv/bin/activate
+                . venv/bin/activate
                 pip install --upgrade pip
                 pip install -r requirements.txt
+                pip install awsebcli  # Install the EB CLI within the virtual environment
                 '''
             }
         }
         
         stage('Test') {
             steps {
-                sh '''#!/bin/bash
+                sh '''
                 chmod +x system_resources_test.sh
                 ./system_resources_test.sh
                 '''
@@ -24,13 +25,12 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh '''#!/bin/bash
-                source venv/bin/activate
+                sh '''
+                . venv/bin/activate
                 eb create Bank_Application_main --single
                 '''
             }
         }
     }
 }
-
 
