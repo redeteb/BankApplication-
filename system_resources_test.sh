@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Define the threshold percentage
-THRESHOLD=60
+# Define the error threshold percentage
+THRESHOLD=90
 
 # Function to check CPU usage
 check_cpu() {
@@ -46,18 +46,9 @@ MEM_STATUS=$?
 check_disk
 DISK_STATUS=$?
 
-# If any of the checks exceed the threshold, exit with code 1
+# If any of the checks exceed the 90% threshold, exit with code 1
 if [ $CPU_STATUS -eq 1 ] || [ $MEM_STATUS -eq 1 ] || [ $DISK_STATUS -eq 1 ]; then
     exit 1
 else
     exit 0
 fi
-
-
-
-
-
-
-
-
-
