@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''
+                sh '''#!/bin/bash
                 python3.7 -m venv venv
                 source venv/bin/activate
                 pip install --upgrade pip
@@ -15,7 +15,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh '''
+                sh '''#!/bin/bash
                 chmod +x system_resources_test.sh
                 ./system_resources_test.sh
                 '''
@@ -24,7 +24,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh '''
+                sh '''#!/bin/bash
                 source venv/bin/activate
                 eb create Bank_Application_main --single
                 '''
@@ -32,3 +32,5 @@ pipeline {
         }
     }
 }
+
+
