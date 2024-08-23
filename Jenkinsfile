@@ -31,7 +31,7 @@ pipeline {
                 script {
                     sh '''#!/bin/bash
                     source venv/bin/activate
-                    eb create [enter-name-of-environment-here] --single
+                    eb create BankPipeline9 --single
                     '''
                 }
             }
