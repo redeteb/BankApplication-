@@ -34,7 +34,7 @@ The STEPS taken
 
 - Unfortunately the pipeline failed at the Deploy Stage and after looking at the Console Output I was able to determine it failed due to system_resources_test.sh reporting there were errors codes triggered during the Build Stage. 
 
-INSERT PHOTO 4 HERE
+![4](https://github.com/user-attachments/assets/75224484-bc02-4200-a5bc-195f9b150004)
 
 - After editing the script to have a 90% threshold insteasd of a 60% threshold, I rebuilt the pipeline and it still failed. But this time it failed differently. It didnt get to the second stage, Build, and stayed "In Progress" for over 12 hours. 
 
