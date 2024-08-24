@@ -22,7 +22,9 @@ The STEPS taken
 
 - After logging into [MyPublicIP]:8080 I created my first Admin User in Jenkins. I then connected my GitHub repo to a Multi-Branch Pipeline
 
-INSERT IMAGE 2 HERE
+
+![2](https://github.com/user-attachments/assets/867b26c8-7e59-4a76-9a74-30a7af543f8e)
+
 
 - I then Installed AWS CLI on the Jenkins Server and verified by checking the version number.
 
