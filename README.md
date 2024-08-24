@@ -40,7 +40,8 @@ The STEPS taken
 
 - After further investigation in the Console Output and research into the error messages shown I figured out the problem was a Node being offline. Nodes must be online and available to execute the jobs as they provide the necessary computing power and environment for the build process. Without an active node, the pipeline has nowhere to run, and therefore, it cannot proceed, resulting in a failure.
 
-https://github.com/redeteb/BankApplication-/issues/3#issue-2484159060
+![8](https://github.com/user-attachments/assets/4a32e8ca-8e8a-4873-8f11-58fb606dcd75)
+
 
 - Attempts to turn the Node on were not being processsed by Jenkins and kept turning back off. More troubleshooting led to the discovery that there wasn't enough Disk Space left on the Jenkins Server to supprt the Node due to all the previous failed builds still being saved on there. After deleting the failed pipleines and checking the new amount of  Disk Space, I reran the the Pipeline and it was successful.  
 
