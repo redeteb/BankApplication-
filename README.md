@@ -57,7 +57,7 @@ The STEPS taken
 
 Optimization 
 -------
-Incorporating a deploy stage in the CI/CD pipeline boosts business efficiency by automating deployments, ensuring that new features, bug fixes, and updates reach production consistently, reducing time to market and minimizing human error. However, without proper version control or rollback systems in place, automated deployments can risk overwriting stable versions, potentially causing crashes. To avoid this, it's crucial that teams and individuals follow best practices in version control, always enabling a return to a previous stable version when needed.
+Incorporating a deploy stage in the CI/CD pipeline boosts business efficiency by automating deployments, ensuring that new features, bug fixes, and updates reach production consistently, reducing time to market and minimizing human error. However, without proper version control or rollback systems in place, automated deployments can risk overwriting stable versions, potentially causing crashes. To avoid this, it's important that teams and individuals follow best practices in version control, always enabling a return to a previous stable version when needed.
 
 Conclusion
 ----
